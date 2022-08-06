@@ -1,5 +1,4 @@
 import fs from 'fs'
-import path from 'path'
 
 /**
  * @param { string } folder The name of the folder you need to handler
@@ -8,7 +7,7 @@ import path from 'path'
 
 const slashhandler = (folder, collection, subfolders = false) => {
     if (subfolders) {
-        const slashcommands = fs.readdirSync(path.join(__dirname, folder)) // ./slashcmd
+        const slashcommands = fs.readdirSync(folder) // ./slashcmd
 
         for (const folders of slashcommands) {
             const folder = fs.readdirSync(`${folder}/${folders}`)

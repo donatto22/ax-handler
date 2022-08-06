@@ -1,7 +1,7 @@
 {
   "name": "ax-handler",
-  "version": "1.0.3",
-  "description": "Simple handler for Discord commands, slash commands and events",
+  "version": "1.0.6",
+  "description": "Simple handler for Discord slash commands and events",
   "scripts": {
     "build": "rollup -c"
   },
@@ -15,8 +15,7 @@
   "exports": {
     ".": {
       "import": "./es/main.js",
-      "require": "./cjs/main.js",
-      "default": "./es/main.js"
+      "require": "./cjs/main.js"
     }
   },
   "module": "./es/main.js",
