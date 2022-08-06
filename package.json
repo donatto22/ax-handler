@@ -1,6 +1,6 @@
 {
   "name": "ax-handler",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple handler for Discord commands, slash commands and events",
   "scripts": {
     "build": "rollup -c"

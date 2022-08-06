@@ -11,7 +11,7 @@ const slashhandler = (folder, collection, subfolders = false) => {
         const slashcommands = fs.readdirSync(path.join(__dirname, folder)) // ./slashcmd
 
         for (const folders of slashcommands) {
-            const folder = fs.readFileSync(`${folder}/${folders}`)
+            const folder = fs.readdirSync(`${folder}/${folders}`)
 
             for (const file of folder) {
                 const command = require(`${folder}/${folders}/${file}`)

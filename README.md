@@ -1,4 +1,4 @@
-# Ax Handler
+# Ax `Discord` Handler
 An easy way to make an event and command handler on discord
 
 ```js
