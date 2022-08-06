@@ -5,16 +5,16 @@ import fs from 'fs'
  * @param { boolean } subfolders Set true If the folder has other folders inside
  */
 
-const slashhandler = (folder, collection, subfolders = false) => {
+const slashhandler = (foldername, collection, subfolders = false) => {
     if (subfolders) {
-        const slashcommands = fs.readdirSync(folder) // ./slashcmd
+        const slashcommands = fs.readdirSync(foldername) // ./slashcmd
 
         for (const folders of slashcommands) {
-            const folder = fs.readdirSync(`${folder}/${folders}`)
+            const folder = fs.readdirSync(`${foldername}/${folders}`)
 
             for (const file of folder) {
-                const command = require(`${folder}/${folders}/${file}`)
-                collection.set(command.data.name, cmd)
+                const command = require(`${foldername}/${folders}/${file}`)
+                collection.set(command.data.name, command)
             }
         }
     } else {
@@ -22,7 +22,7 @@ const slashhandler = (folder, collection, subfolders = false) => {
 
         for (const file of slashcommands) {
             const command = require(`${folder}/${file}`)
-            collection.set(command.data.name, cmd)
+            collection.set(command.data.name, command)
         }
     }
 }

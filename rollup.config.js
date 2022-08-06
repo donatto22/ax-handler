@@ -1,5 +1,5 @@
 export default {
-    input: './main.js',
+    input: './index.js',
     output: [
         {
             file: './cjs/main.js',
