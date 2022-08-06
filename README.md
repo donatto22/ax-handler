@@ -1,6 +1,8 @@
 # Ax `Discord` Handler
 An easy way to make an event and command handler on discord
 
+<a href="https://www.npmjs.com/package/ax-handler"><img src="https://img.shields.io/npm/v/ax-handler?style=flat-square" alt="version">
+
 ```js
 const handler = require('ax-handler')
 ```
@@ -19,7 +21,7 @@ handler.eventhandler(client, path.join(__dirname, 'events'))
 // Second parameter is the collection of slash commands
 // If you have subfolders, set the third parameter on true
 client.slashcommands = new Collection()
-handler.slashhandler('slashcmd', client.slashcommands, true)
+handler.slashhandler(path.join(__dirname, 'slashcmd'), client.slashcommands, true)
 ```
 
 ### Output
@@ -27,3 +29,7 @@ handler.slashhandler('slashcmd', client.slashcommands, true)
 > Bot is ready
 > Slashcommands loaded successfully
 ```
+
+### What do I need?
+- First, the name you put in handler has to be the same as the name of your folder
+- Second, for event handler you need a **run** function and **execute** for slash handler
