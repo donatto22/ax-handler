@@ -1,0 +1,36 @@
+{
+  "name": "ax-handler",
+  "version": "1.0.0",
+  "description": "Simple handler for Discord commands, slash commands and events",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donatto22/discord-handler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/donatto22/discord-handler/issues"
+  },
+  "exports": {
+    ".": {
+      "import": "./es/main.js",
+      "require": "./cjs/main.js",
+      "default": "./es/main.js"
+    }
+  },
+  "main": "./cjs/main.js",
+  "module": "./es/main.js",
+  "browser": "./es/main.js",
+  "homepage": "https://github.com/donatto22/discord-handler#readme",
+  "keywords": [
+    "discord",
+    "handler",
+    "discordjs"
+  ],
+  "author": "Donatto Minaya",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "rollup": "^2.77.2"
+  }
+}
