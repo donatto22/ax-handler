@@ -32,4 +32,38 @@ handler.slashhandler(path.join(__dirname, 'slashcmd'), client.slashcommands, tru
 
 ### What do I need?
 - First, the name you put in handler has to be the same as the name of your folder
-- Second, for event handler you need a **run** function and **execute** for slash handler
+- Second, for event and slash handler you need a **run** function
+
+### Example
+```js
+// folder / subfolder / file
+// slashcmd / util/ ping.js
+const { SlashCommandBuilder } = require('@discordjs/builders')
+
+module.exports = {
+    data: new SlashCommandBuilder().setName('ping'),
+
+    async run (client, interaction) {
+        // code
+    }
+}
+```
+
+```js
+// folder / file
+// events / ready.js
+const { ActivityType, Client, Message } = require('discord.js')
+
+module.exports = {
+    name: 'ready',
+
+    async run (client, message) {
+        client.user?.setPresence({
+            activities: [{ 
+                name: 'Using ax-handler', 
+                type: ActivityType.Playing 
+            }]
+        })
+    }
+}
+```
