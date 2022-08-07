@@ -36,6 +36,10 @@ handler.slashhandler(path.join(__dirname, 'slashcmd'), client.slashcommands, tru
 
 ### Example
 ```js
+// ----------------------------
+// Slash command
+// ----------------------------
+
 // folder / subfolder / file
 // slashcmd / util/ ping.js
 const { SlashCommandBuilder } = require('@discordjs/builders')
@@ -50,6 +54,10 @@ module.exports = {
 ```
 
 ```js
+// ----------------------------
+// Event Ready
+// ----------------------------
+
 // folder / file
 // events / ready.js
 const { ActivityType, Client, Message } = require('discord.js')
@@ -67,3 +75,16 @@ module.exports = {
     }
 }
 ```
+
+### Events Structure
+![image](https://user-images.githubusercontent.com/68967448/183275355-76fe063d-d36e-4f8f-9ac1-fd5c699bf56b.png)
+
+###  Slashcommands Structure
+![slash structure](https://user-images.githubusercontent.com/68967448/183275339-cd922dcd-fe57-4df6-ae97-afcf432b10fb.png)
+
+
+> This is the structure of the bot ToxicDoll
+
+[ToxicDoll Bot](https://discord.com/api/oauth2/authorize?client_id=962044667690623067&permissions=8&scope=bot%20applications.commands)
+
+
